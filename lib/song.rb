@@ -40,4 +40,16 @@ class Song
     end
     new_hash
   end
+
+  def self.artist_count
+    new_hash = {}
+
+    @@artists.each do |element|
+      if new_hash.keys.include?(element) == false
+        new_hash[element] = 1
+      else
+        new_hash[element] += 1
+      end
+    end
+  end
 end
